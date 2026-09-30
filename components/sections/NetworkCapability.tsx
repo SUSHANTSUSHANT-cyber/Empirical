@@ -1,0 +1,6 @@
+import type { CSSProperties } from 'react';
+import { capabilities, categories, institutions } from '@/data/content';
+
+export function NetworkCapability() {
+  return <section id="capabilities" className="section network-section"><div className="wide-shell"><div className="network-top"><div><p className="eyebrow">NETWORK & CAPABILITY</p><h2>Operational depth for studies across India.</h2></div><div className="network-statement"><span>50+</span><p>Active hospital sites across Tier I & Tier II India form the operating network behind site-managed device research.</p></div></div><div className="network-map" aria-label="Representative hospital network"><div className="network-spine" aria-hidden="true"></div><p>Representative sites</p><div>{institutions.map((institution, index) => <span key={institution} style={{ '--node': index } as CSSProperties}>{institution}</span>)}</div></div><div className="capability-ledger"><div><p className="eyebrow">IN-HOUSE CAPABILITY</p><h3>Operational support, structured for clinical delivery.</h3></div><ul>{capabilities.map((capability, index) => <li key={capability}><span>0{index + 1}</span>{capability}</li>)}</ul></div><div className="coverage-clusters"><p className="eyebrow">THERAPEUTIC & TECHNOLOGY COVERAGE</p><div>{categories.map((category) => <span key={category}>{category}</span>)}</div></div></div></section>;
+}
