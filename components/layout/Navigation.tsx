@@ -20,7 +20,7 @@ export function Navigation() {
   }, []);
 
   return <header className="site-header"><div className="nav-shell">
-    <a className="brand" href="#home" aria-label={`${siteConfig.brandName} home`}><img src="/viveka-medtech-logo.svg" alt="Viveka Medtech" /></a>
+    <a className="brand" href="#home" aria-label={`${siteConfig.brandName} home`}><img src="/Viveka_Medtech_logo.png" alt="Viveka Medtech" /></a>
     <button className="menu-button" type="button" aria-expanded={open} aria-controls="primary-navigation" onClick={() => setOpen(!open)}><span className="sr-only">{open ? 'Close' : 'Open'} navigation</span><span aria-hidden="true"></span><span aria-hidden="true"></span></button>
     <nav id="primary-navigation" className={open ? 'nav-links is-open' : 'nav-links'} aria-label="Main navigation">
       {siteConfig.navigation.map((item) => <a key={item.href} href={item.href} aria-current={activeId === item.href.slice(1) ? 'page' : undefined} onClick={() => setOpen(false)}>{item.label}</a>)}
