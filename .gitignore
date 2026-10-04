@@ -3,3 +3,8 @@ node_modules
 .env
 .env.local
 *.log
+
+# Browser automation artifacts
+artifacts/polish-*-profile/
+artifacts/screenshots/
+Screen Recording *.mp4
